@@ -1,475 +1,273 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRW3CRXZ8X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GRW3CRXZ8X');
-  </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Red Dragon Security — Cyber Research & Development</title>
-  <meta name="description" content="Specialist cyber research, exploit analysis, AI security, and security consultancy." />
-  <meta name="theme-color" content="#0a0a0c" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0a0a0c;
-      --surface: #121216;
-      --border: #222228;
-      --text: #ededef;
-      --muted: #8b8b9e;
-      --accent: #cc0000;
-      --max-width: 900px;
-    }
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QCE2J4FJV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0QCE2J4FJV');
+    </script>
 
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', system-ui, sans-serif; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
-      padding: 0 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>UK Cybersecurity Testing | Red Dragon Security | Independent Audits Shropshire</title>
+    <meta name="description" content="Independent UK cybersecurity auditing. Specialising in WordPress security, deepfake fraud audits, and Shropshire on-site sweeps. Featured by BBC & Reuters. No sales, just testing.">
+    <meta name="keywords" content="Cybersecurity Audit Telford, IT Security Shropshire, WordPress Security UK, Independent Cyber Auditor, AI Fraud Audit, 2026 Cyber Compliance UK, Red Dragon Security">
+    <link rel="canonical" href="https://ukcybersecuritytesting.co.uk/" />
 
-    header {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 30px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      position: relative;
-    }
+    <meta name="geo.region" content="GB-SHR" />
+    <meta name="geo.placename" content="Telford" />
+    <meta name="geo.position" content="52.6784;-2.4453" />
+    <meta name="ICBM" content="52.6784, -2.4453" />
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--text);
-    }
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="UK Cybersecurity Testing | Independent National Security Audits">
+    <meta property="og:description" content="Objective security testing for UK infrastructure. Operated by Red Dragon Security. Shropshire on-site support available.">
+    <meta property="og:url" content="https://ukcybersecuritytesting.co.uk/">
+    <meta property="og:site_name" content="UK Cybersecurity Testing">
 
-    .logo {
-      width: 36px;
-      height: 36px;
-      background: var(--accent);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.9rem;
-      border-radius: 4px;
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "UK Cybersecurity Testing",
+      "image": "https://ukcybersecuritytesting.co.uk/og-image.jpg",
+      "@id": "https://ukcybersecuritytesting.co.uk",
+      "url": "https://ukcybersecuritytesting.co.uk",
+      "telephone": "+447986903415",
+      "email": "matthew@ukcybersecuritytesting.co.uk",
+      "priceRange": "£150-£5000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Telford",
+        "addressRegion": "Shropshire",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.6784,
+        "longitude": -2.4453
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Telford"},
+        {"@type": "City", "name": "Shrewsbury"},
+        {"@type": "City", "name": "Oswestry"},
+        {"@type": "Country", "name": "United Kingdom"}
+      ],
+      "sameAs": [
+        "https://www.bbc.co.uk/search?q=Red+Dragon+Security",
+        "https://www.reuters.com/"
+      ]
     }
+    </script>
 
-    .brand-name {
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: -0.01em;
-    }
-
-    /* Navigation & Mobile Toggle */
-    nav {
-      display: flex;
-      gap: 24px;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.15s ease;
-    }
-
-    nav a:hover {
-      color: var(--text);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 40px 0;
-    }
-
-    .hero {
-      margin-bottom: 60px;
-    }
-
-    .meta-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-
-    .lead {
-      color: var(--muted);
-      font-size: 1.1rem;
-      max-width: 48ch;
-      margin-bottom: 32px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      background: var(--text);
-      color: var(--bg);
-      padding: 10px 18px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: opacity 0.15s ease;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-
-    .btn.secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn.secondary:hover {
-      border-color: var(--muted);
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* Responsive Grid Layouts */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 24px;
-      border-radius: 6px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .card h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .press-callout {
-      font-size: 0.9rem;
-      color: var(--muted);
-      padding: 16px 20px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 2px solid var(--accent);
-      border-radius: 0 4px 4px 0;
-      margin-top: 32px;
-    }
-
-    footer {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 40px 0;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      color: var(--muted);
-      font-size: 0.85rem;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    /* Form Styles */
-    #hubspot-form-wrapper .hs-form { color: var(--text); }
-    #hubspot-form-wrapper .hs-form label { color: var(--muted); font-size: 0.85rem; font-weight: 500; margin-bottom: 6px; display: block; }
-    #hubspot-form-wrapper .hs-input, #hubspot-form-wrapper .hs-textarea {
-      background: var(--surface) !important;
-      border: 1px solid var(--border) !important;
-      color: var(--text) !important;
-      padding: 10px 12px !important;
-      border-radius: 4px !important;
-      width: 100% !important;
-      font-size: 0.9rem !important;
-    }
-    #hubspot-form-wrapper .hs-input:focus, #hubspot-form-wrapper .hs-textarea:focus {
-      border-color: var(--muted) !important;
-      outline: none !important;
-    }
-    #hubspot-form-wrapper .hs-button {
-      background: var(--text) !important;
-      color: var(--bg) !important;
-      border: none !important;
-      padding: 10px 18px !important;
-      border-radius: 4px !important;
-      font-weight: 500 !important;
-      cursor: pointer !important;
-      font-size: 0.9rem !important;
-    }
-
-    .consent {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-    .consent input { margin-top: 3px; accent-color: var(--accent); }
-
-    /* Mobile Responsive Overrides */
-    @media(max-width: 768px) {
-      .menu-toggle { display: block; }
-      nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        flex-direction: column;
-        padding: 16px 20px;
-        gap: 16px;
-        z-index: 50;
-      }
-      nav.active { display: flex; }
-      body { padding: 0 16px; }
-    }
-  </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #0a0a0c 0%, #121216 100%); }
+        .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .service-card:hover { transform: translateY(-3px); box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2); }
+    </style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 leading-normal selection:bg-red-600 selection:text-white">
 
-  <header>
-    <a href="#" class="brand">
-      <div class="logo">RD</div>
-      <div class="brand-name">Red Dragon Security</div>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">Menu</button>
-    <nav id="navMenu">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="bg-[#121216] border-b border-slate-800 py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center">
+            <div class="font-extrabold text-lg tracking-tight text-white uppercase flex items-center gap-2">
+                <span class="w-3 h-3 bg-red-600 rounded-sm inline-block"></span>
+                UK CYBERSECURITY <span class="text-red-500 font-light italic">TESTING</span>
+            </div>
+            <div class="flex items-center gap-6 mt-2 md:mt-0 font-bold text-xs uppercase tracking-widest">
+                <a href="tel:+447986903415" class="text-slate-400 hover:text-red-500 transition">+44 7986 903415</a>
+                <a href="#contact" class="bg-red-600 text-white px-5 py-2 rounded hover:bg-red-700 transition shadow-sm">Request Audit</a>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="meta-tag">Private CyberAI Research & Exploit & Development</div>
-      <h1>Specialist cyber research, security engineering, and consulting.</h1>
-      <p class="lead">Delivering in-depth vulnerability research, artificial intelligence security studies, and secure software development for organizations seeking advanced digital defense.</p>
-      
-      <div class="actions">
-        <a class="btn" href="#contact">Get in Touch</a>
-        <a class="btn secondary" href="https://ukcybersecuritytesting.co.uk" target="_blank" rel="noopener">ukcybersecuritytesting.co.uk &rarr;</a>
-      </div>
+    <header class="hero-gradient text-white py-20 px-6 text-center border-b-4 border-red-600">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block font-mono text-xs text-red-500 uppercase tracking-widest mb-4 px-3 py-1 bg-red-950/40 border border-red-500/30 rounded">
+                Private CyberAI Research & Exploit & Development
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight uppercase tracking-tight">
+                Independent <br><span class="text-red-500 italic text-3xl md:text-5xl">National Security Testing.</span>
+            </h1>
+            <p class="text-lg text-slate-300 mb-8 leading-relaxed font-light max-w-2xl mx-auto">
+                Providing <strong>Nationwide</strong> independent auditing with specialized on-site support for <strong>Shropshire & Telford</strong>. Led by <strong>Matthew Beddoes</strong> under <strong>Red Dragon Security</strong>, as featured by the <strong>BBC</strong> and <strong>Reuters</strong>.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 text-xs font-bold uppercase tracking-widest">
+                <span class="text-red-400 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded">Red Dragon Security</span>
+                <span class="text-slate-300 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded">Matthew Beddoes</span>
+                <span class="text-slate-300 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded">Independent Auditor</span>
+            </div>
+        </div>
+    </header>
 
-      <div class="press-callout">
-        Featured security analyst commentary across BBC Radio 2, BBC Radio Merseyside, and LBC Radio.
-      </div>
+    <section class="max-w-4xl mx-auto -mt-6 px-6 relative z-10">
+        <div class="bg-[#121216] p-6 rounded-lg shadow-xl border border-slate-800 border-l-4 border-red-600">
+            <p class="text-slate-300 text-sm leading-relaxed">
+                <strong class="text-white">Strategic Independence:</strong> Operated by Matthew Beddoes through <strong class="text-white">Red Dragon Security</strong>, we provide <strong class="text-white">testing only</strong>. We do not perform repairs or sell IT products. This ensures 100% objective reports—giving your team the facts needed to secure your infrastructure.
+            </p>
+        </div>
     </section>
 
-    <section id="services">
-      <h2>Capabilities</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Consulting & Risk Advisory</h3>
-          <p>Expert guidance for executive teams and engineering departments to evaluate digital risks, secure core infrastructure, and respond effectively to security incidents.</p>
+    <section id="services" class="max-w-6xl mx-auto py-20 px-6">
+        <h2 class="text-3xl font-black text-white uppercase text-center mb-12 italic tracking-tight underline decoration-red-600 underline-offset-8">Audit & Testing Services</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div class="bg-[#121216] p-8 rounded-lg border border-slate-800 shadow service-card">
+                <h3 class="font-bold text-red-500 uppercase mb-2 italic text-lg tracking-tight">WordPress Security Check</h3>
+                <p class="text-sm text-slate-400 mb-6">Deep-dive into website architecture. Finding backdoors and weak spots missed by automated scanners—essential for UK SME resilience.</p>
+                <div class="text-2xl font-bold text-white">£450 <span class="text-xs text-slate-500 font-normal uppercase tracking-widest">Remote Audit</span></div>
+            </div>
+
+            <div class="bg-[#121216] p-8 rounded-lg border border-slate-800 shadow service-card">
+                <h3 class="font-bold text-red-500 uppercase mb-2 italic text-lg tracking-tight">AI Fraud & Invoice Audit</h3>
+                <p class="text-sm text-slate-400 mb-4">Testing digital signatures and SPF/DKIM configurations to protect against AI-driven email spoofing and deepfake financial scams.</p>
+                <div class="text-2xl font-bold text-white">£450 <span class="text-xs text-slate-500 font-normal uppercase tracking-widest">Remote Audit</span></div>
+            </div>
+
+            <div class="bg-[#121216] p-8 rounded-lg border-2 border-red-600 shadow-xl service-card">
+                <h3 class="font-bold text-red-500 uppercase mb-2 italic tracking-tight text-lg">Strategic Consultation</h3>
+                <p class="text-sm text-slate-300 mb-4 font-bold uppercase">1-Hour Expert Discussion & Advice.</p>
+                <p class="text-xs text-slate-400 mb-6 leading-relaxed">Direct 1-to-1 Q&A with Matthew Beddoes regarding risk mitigation or 2026 UK Cyber Security & Resilience Bill compliance.</p>
+                <div class="text-2xl font-bold text-white text-center">£250 <span class="text-xs text-slate-500 font-normal uppercase tracking-widest">Per Hour</span></div>
+            </div>
+
+            <div class="bg-[#121216] p-8 rounded-lg border border-slate-800 shadow service-card">
+                <h3 class="font-bold text-red-500 uppercase mb-2 italic text-lg tracking-tight">Insurance Readiness Check</h3>
+                <p class="text-sm text-slate-400 mb-6">Audit your tech stack against insurance mandates to ensure your Cyber Insurance policy remains fully valid.</p>
+                <div class="text-2xl font-bold text-white">£450 <span class="text-xs text-slate-500 font-normal uppercase tracking-widest">Fixed Fee</span></div>
+            </div>
+
+            <div class="bg-[#121216] p-8 rounded-lg border border-slate-800 shadow service-card">
+                <h3 class="font-bold text-red-500 uppercase mb-2 italic text-lg tracking-tight">Director Privacy Audit</h3>
+                <p class="text-sm text-slate-400 mb-6">Forensic audit of personal digital footprints to remove data hackers use for targeted corporate social engineering.</p>
+                <div class="text-2xl font-bold text-white">£450 <span class="text-xs text-slate-500 font-normal uppercase tracking-widest">Per Director</span></div>
+            </div>
+
+            <div class="bg-[#121216] p-8 rounded-lg border border-slate-800 shadow service-card">
+                <h3 class="font-bold text-red-500 uppercase mb-2 italic text-lg tracking-tight">Physical "Site Sweep"</h3>
+                <p class="text-sm text-slate-400 mb-6">Local on-site walk-through for Shropshire businesses to find hardware risks, unlocked network ports, or unsecured data.</p>
+                <div class="text-2xl font-bold text-white">£350+ <span class="text-xs text-slate-500 font-normal uppercase tracking-widest">On-Site Only</span></div>
+            </div>
         </div>
-        <div class="card">
-          <h3>Vulnerability & Exploit Research</h3>
-          <p>Investigating complex software flaws to understand how attackers breach systems, allowing us to help organizations patch vulnerabilities proactively.</p>
+
+        <div class="max-w-4xl mx-auto bg-[#121216] p-8 rounded-xl border border-slate-800 mb-20 shadow-sm">
+            <h3 class="font-bold text-white uppercase mb-4 text-center italic tracking-tight">Shropshire & National Logistics</h3>
+            <div class="grid md:grid-cols-2 gap-6 text-sm">
+                <div class="p-4 bg-slate-900 rounded border border-slate-800">
+                    <p class="font-bold text-red-500 mb-1 uppercase tracking-widest text-xs">Local Call-Out (Telford/Shrewsbury)</p>
+                    <p class="text-slate-400"><strong class="text-white">£150.00</strong> Flat Fee for on-site visits within Shropshire. Specialized support for local SMEs.</p>
+                </div>
+                <div class="p-4 bg-slate-900 rounded border border-slate-800">
+                    <p class="font-bold text-red-500 mb-1 uppercase tracking-widest text-xs">National Travel</p>
+                    <p class="text-slate-400"><strong class="text-white">£150.00 + Expenses</strong> for site visits outside of Shropshire. Travel time charged at 50% hourly rate.</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <h3>AI Security & Research</h3>
-          <p>Evaluating how artificial intelligence systems process data, identifying potential security blind spots, and building safety controls for machine learning tools.</p>
+
+        <h2 class="text-3xl font-black text-white uppercase text-center mb-12 italic tracking-tight underline decoration-red-600 underline-offset-8">Enterprise & Threat Intel</h2>
+        <div class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-[#121216] p-10 rounded-xl border border-slate-800 shadow-2xl relative">
+                <span class="absolute -top-3 right-6 bg-red-600 text-white text-[10px] px-3 py-1 rounded font-bold uppercase tracking-widest">Enterprise</span>
+                <h3 class="text-xl font-extrabold uppercase mb-4 text-white italic">Full Site Integrity Audit</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed text-sm">Complete forensic testing of a single physical location. Includes network stress-tests, staff awareness simulations, and compliance roadmaps.</p>
+                <div class="text-3xl font-black text-white">£2,500 - £5,000</div>
+                <p class="text-[10px] text-slate-500 uppercase font-bold mt-4 border-t border-slate-800 pt-4">
+                    *Per site. Standard rate covers up to 100 devices. Larger Shropshire infrastructures require a Custom Quote.
+                </p>
+            </div>
+
+            <div class="bg-[#121216] p-10 rounded-xl border border-slate-800 shadow-2xl">
+                <h3 class="text-xl font-extrabold uppercase mb-4 text-red-500 italic">Monthly Threat Intelligence</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed text-sm">Continuous 6-month term managed by Matthew Beddoes. Monitoring dark web leaks and specific UK-targeted exploits (CVEs) impacting your industry.</p>
+                <div class="text-3xl font-black text-white">£250 / Month</div>
+                <p class="text-[10px] text-slate-500 uppercase font-bold mt-4 border-t border-slate-800 pt-4 text-center">6-Month Minimum Engagement (Remote - Nationwide)</p>
+            </div>
         </div>
-        <div class="card">
-          <h3>Secure Software Development</h3>
-          <p>Building specialized internal tools and applications from the ground up with a heavy emphasis on data protection, system reliability, and operational security.</p>
-        </div>
-      </div>
     </section>
 
-    <section id="projects">
-      <h2>Active Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>MFA Bypass Detection</h3>
-          <p>Engineering specialized monitoring systems to spot sophisticated attacks where hackers attempt to slip past two-factor authentication prompts.</p>
+    <section class="bg-[#121216] text-white py-24 px-6 overflow-hidden relative border-y border-slate-800">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+            <div class="z-10">
+                <h2 class="text-3xl font-black mb-6 text-red-500 uppercase italic leading-relaxed text-center md:text-left">The Evolution of the Dragon.</h2>
+                <p class="text-lg text-slate-300 font-bold italic mb-4">"The Black Dragon was the shadow of the Red Dragon."</p>
+                <p class="text-base text-slate-400 leading-relaxed border-l-2 border-red-600 pl-4 mb-6 font-light">
+                    As featured by <strong class="text-white">Reuters</strong> and the <strong class="text-white">BBC</strong>, the methodology behind <strong class="text-white">Red Dragon Security</strong> and lead engineer Matthew Beddoes was forged in the shadows of high-security digital environments. Today, that offensive-informed mindset is used exclusively to protect and audit UK infrastructure.
+                </p>
+            </div>
+            <div class="text-xs space-y-4 font-bold uppercase tracking-widest text-slate-400">
+                <div class="border-b border-slate-800 pb-2">BBC Radio 2 Security Commentator</div>
+                <div class="border-b border-slate-800 pb-2 text-red-400">Reuters Featured Specialist</div>
+                <div class="border-b border-slate-800 pb-2">LBC Radio Analyst</div>
+                <div class="border-b border-slate-800 pb-2 text-slate-300">Independent UK Auditor</div>
+            </div>
         </div>
-        <div class="card">
-          <h3>Automated Testing (Fuzzing)</h3>
-          <p>Developing lightweight machine learning algorithms designed to automatically test software inputs, helping uncover hidden bugs and system crashes faster.</p>
-        </div>
-        <div class="card">
-          <h3>AI Agent Security Assessment</h3>
-          <p>Testing the boundaries, operational constraints, and failure points of automated artificial intelligence tools used in technical environments.</p>
-        </div>
-      </div>
     </section>
 
-    <section id="contact">
-      <h2>Initiate Contact</h2>
-      <div style="max-width: 500px;">
-        <div id="hubspot-form-wrapper"></div>
+    <section id="contact" class="py-24 px-6 text-center bg-slate-950">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-black mb-6 uppercase tracking-tight text-white underline decoration-red-600 underline-offset-8">Secure <span class="text-red-500">Contact.</span></h2>
+            <p class="text-slate-400 mb-10 text-lg font-medium">
+                Independent testing in Shropshire and across the UK. Unbiased results delivered directly by Matthew Beddoes.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12 text-left">
+                <div class="bg-[#121216] p-8 rounded-xl border border-slate-800 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-bold text-white uppercase mb-2 italic tracking-tight">Preliminary Risk Review</h4>
+                        <p class="text-sm text-slate-400 mb-6 leading-relaxed">Technical review of 3 core risks visible to the outside world. Report delivered via email by Matthew Beddoes.</p>
+                        <p class="text-3xl font-black text-red-500 mb-6">£150.00 <span class="text-xs font-normal text-slate-500 uppercase">Remote Only</span></p>
+                    </div>
+                    <a href="mailto:matthew@ukcybersecuritytesting.co.uk" class="bg-red-600 text-white text-center font-bold px-8 py-3 rounded hover:bg-red-700 transition uppercase tracking-widest text-xs">Order Review</a>
+                </div>
 
-        <div class="consent">
-          <input type="checkbox" id="consent-checkbox" />
-          <label for="consent-checkbox">I consent to storing my information for communication and enquiry purposes.</label>
-        </div>
+                <div class="bg-[#121216] text-white p-8 rounded-xl border border-slate-800 shadow-2xl flex flex-col justify-center">
+                    <h4 class="font-bold text-red-500 uppercase mb-4 tracking-widest text-xs">Verified Direct Communication</h4>
+                    <div class="space-y-4">
+                        <p class="text-sm font-bold border-b border-slate-800 pb-2">DIRECT EMAIL: <a href="mailto:matthew@ukcybersecuritytesting.co.uk" class="text-slate-300 hover:text-white">matthew@ukcybersecuritytesting.co.uk</a></p>
+                        <p class="text-sm font-bold border-b border-slate-800 pb-2">TEL / SIGNAL / WHATSAPP: <a href="tel:+447986903415" class="text-slate-300 hover:text-white">+44 7986 903415</a></p>
+                        <p class="text-[10px] text-slate-500 uppercase leading-relaxed">Direct inquiries for Shropshire site audits, forensic intelligence monitoring, or consultation with Matthew Beddoes.</p>
+                    </div>
+                </div>
+            </div>
 
-        <div style="margin-top: 20px; font-size: 0.85rem; color: var(--muted); display: flex; flex-direction: column; gap: 6px;">
-          <div>Direct Email: <a href="mailto:matthew@ukcybersecuritytesting.co.uk" style="color: var(--text); text-decoration: none;">matthew@ukcybersecuritytesting.co.uk</a></div>
-          <div>Direct Phone: <a href="tel:+447986903415" style="color: var(--text); text-decoration: none;">+44 7986 903415</a></div>
+            <!-- HubSpot Form Integration Container -->
+            <div class="bg-[#121216] p-8 md:p-12 rounded-xl border border-slate-800 shadow-2xl text-left max-w-2xl mx-auto">
+                <h3 class="text-xl font-extrabold uppercase mb-2 text-white italic">Request an Audit or Consultation</h3>
+                <p class="text-xs text-slate-400 mb-6 uppercase tracking-widest">Fill out the secure form below to initiate communication.</p>
+                
+                <!-- HubSpot Embed Script Placeholder -->
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    region: "na1",
+                    portalId: "YOUR_PORTAL_ID",
+                    formId: "YOUR_FORM_GUID"
+                  });
+                </script>
+            </div>
         </div>
-
-        <div id="contact-success" style="display: none; margin-top: 16px; font-size: 0.9rem; color: var(--text);">
-          Message received. Expect a response within 24 hours.
-        </div>
-      </div>
     </section>
-  </main>
 
-  <footer>
-    <div>&copy; Red Dragon Security</div>
-    <div>Direct: matthew@ukcybersecuritytesting.co.uk | +44 7986 903415</div>
-  </footer>
+    <footer class="bg-[#0a0a0c] border-t border-slate-800 py-12 text-center text-slate-400 text-xs">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col gap-4">
+            <div class="font-bold uppercase tracking-widest text-slate-300">
+                UK Cybersecurity Testing | Red Dragon Security | Matthew Beddoes
+            </div>
+            <p class="text-[11px] text-slate-500 max-w-2xl mx-auto">
+                Serving Telford, Shrewsbury, Oswestry, and organizations nationwide. Operating strictly on an independent testing and auditing model without hardware or software sales conflicts.
+            </p>
+            <div class="mt-6 pt-6 border-t border-slate-900 text-[10px] uppercase tracking-widest text-slate-600">
+                &copy; 2026 Matthew Beddoes &bull; As Seen on BBC, Reuters & LBC
+            </div>
+        </div>
+    </footer>
 
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
-    });
-
-    // Close menu on link click for mobile
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
-    });
-
-    // HubSpot / Fallback Form Script
-    (function(){
-      var portalId = "YOUR_PORTAL_ID";
-      var formId = "YOUR_FORM_ID";
-      var wrapper = document.getElementById("hubspot-form-wrapper");
-
-      if (!portalId || !formId) {
-        if (wrapper) {
-          wrapper.innerHTML = '<form id="fallback-contact" style="display:flex;flex-direction:column;gap:14px">' +
-            '<div><label>Name</label><input name="name" required></div>' +
-            '<div><label>Email</label><input name="email" type="email" required></div>' +
-            '<div><label>Message</label><textarea name="message" rows="4" required></textarea></div>' +
-            '<button type="submit" class="btn" style="align-self:flex-start">Send</button></form>';
-
-          var form = wrapper.querySelector('#fallback-contact');
-          form.addEventListener('submit', function(e){
-            e.preventDefault();
-            var consentBox = document.getElementById('consent-checkbox');
-            if (consentBox && !consentBox.checked) {
-              alert('Please check the consent box.');
-              return;
-            }
-            document.getElementById('contact-success').style.display = 'block';
-            wrapper.style.display = 'none';
-          });
-        }
-        return;
-      }
-
-      var script = document.createElement('script');
-      script.src = 'https://js.hsforms.net/forms/v2.js';
-      script.async = true;
-      script.onload = function(){
-        if (window.hbspt && window.hbspt.forms) {
-          window.hbspt.forms.create({
-            portalId: portalId,
-            formId: formId,
-            target: '#hubspot-form-wrapper',
-            css: '',
-            onFormReady: function(){
-              var consent = document.getElementById('consent-checkbox');
-              var injected = document.querySelector('#hubspot-form-wrapper form.hs-form');
-              if (!injected || !consent) return;
-              injected.addEventListener('submit', function(e){
-                if (!consent.checked) {
-                  e.preventDefault();
-                  alert('Please confirm consent.');
-                  return false;
-                }
-              });
-            },
-            onFormSubmitted: function(){
-              document.getElementById('hubspot-form-wrapper').style.display = 'none';
-              document.getElementById('contact-success').style.display = 'block';
-            }
-          });
-        }
-      };
-      document.head.appendChild(script);
-    })();
-  </script>
 </body>
 </html>
