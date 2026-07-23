@@ -1,113 +1,434 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Red Dragon Security — Cyber Intelligence & AI Security Testing</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRW3CRXZ8X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GRW3CRXZ8X');
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Red Dragon Security — Private Threat Intelligence & Cyber Research</title>
+  <meta name="description" content="Red Dragon Security — private threat intelligence, exploit research, tool development, AI for cyber research, OPSEC & OSINT consultancy. Featured on BBC Radio 2, BBC Radio Merseyside, and LBC Radio." />
+  <meta name="theme-color" content="#0b0b0c" />
+  <style>
+    :root{
+      --bg:#050506;
+      --panel:#0f0f10;
+      --muted:#9aa0a6;
+      --text:#eef0f2;
+      --accent:#cc0000;
+      --accent-dark:#990000;
+      --border:#1f1f22;
+      --glass: rgba(255,255,255,0.02);
+      --radius:12px;
+      --max-width:1200px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial}
+    html,body{height:100%}
+    body{
+      background:linear-gradient(180deg,var(--bg) 0%, #070708 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+
+    header{
+      position:sticky;top:0;z-index:60;
+      background:linear-gradient(180deg, rgba(10,10,10,0.7), rgba(10,10,10,0.35));
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{
+      max-width:var(--max-width);margin:0 auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-0.02em}
+    .logo{
+      width:44px;height:44px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-family:var(--mono);
+      box-shadow:0 6px 18px rgba(204,0,0,0.08), inset 0 -6px 18px rgba(0,0,0,0.25);
+    }
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:0.95rem}
+    nav a:hover{color:var(--text)}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:48px 20px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;margin-bottom:36px}
+    .pill{display:inline-block;background:rgba(204,0,0,0.07);color:var(--accent);padding:6px 12px;border-radius:999px;font-weight:800;font-size:0.78rem;border:1px solid rgba(204,0,0,0.06)}
+    h1{font-size:clamp(2rem,4vw,3rem);margin:12px 0 8px 0;line-height:1.02}
+    .lead{color:var(--muted);font-size:1.05rem;margin-bottom:18px;max-width:60ch}
+
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;font-weight:800;text-decoration:none;border:none;cursor:pointer}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+    .card{background:linear-gradient(180deg,var(--panel), rgba(15,15,17,0.9));border:1px solid var(--border);padding:18px;border-radius:12px}
+    .meta{color:var(--muted);font-size:0.9rem;margin-top:8px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:22px}
+    .service h3{font-size:1.05rem;margin-bottom:8px}
+    .service p{color:var(--muted);font-size:0.95rem}
+
+    .section-title{display:flex;align-items:center;gap:12px;margin:36px 0 18px 0}
+    .section-title h2{font-size:1.25rem}
+
+    .tools-list{display:flex;flex-direction:column;gap:10px}
+    .tool-item{display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+    .tool-item strong{color:var(--text)}
+
+    footer{border-top:1px solid var(--border);padding:28px 20px;margin-top:40px;color:var(--muted);text-align:center}
+    .small{font-size:0.9rem;color:var(--muted)}
+
+    /* Contact / HubSpot fallback */
+    #hubspot-form-wrapper .hs-form{background:transparent;color:var(--text)}
+    #hubspot-form-wrapper .hs-form label{color:var(--muted);font-weight:700}
+    #hubspot-form-wrapper .hs-input,#hubspot-form-wrapper .hs-textarea{background:#0b0b0c;border:1px solid var(--border);color:var(--text);padding:10px;border-radius:8px}
+    #hubspot-form-wrapper .hs-button{background:var(--accent);border:none;color:#fff;padding:10px 14px;border-radius:8px;font-weight:800}
+    .consent{display:flex;align-items:flex-start;gap:10px;margin-top:10px;color:var(--muted);font-size:0.9rem}
+    .consent input{width:18px;height:18px;margin-top:3px}
+
+    /* Press badge */
+    .press-badge{display:inline-block;background:#0b0b0c;border:1px solid var(--border);padding:8px 14px;border-radius:999px;color:var(--text);font-weight:700;font-size:0.9rem}
+
+    /* Active projects list */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:18px}
+    .project{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03)}
+    .project h4{margin:0 0 8px 0;color:var(--accent)}
+    .project p{color:var(--muted);margin:0;font-size:0.95rem}
+    .project .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:#0b0b0c;border:1px solid var(--border);padding:6px 8px;border-radius:999px;color:var(--muted);font-weight:700;font-size:0.82rem}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;gap:18px}
+      .hero-right{order:2}
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">RD</div>
+        <div>
+          <div style="font-size:0.95rem">Red Dragon</div>
+          <div style="font-size:0.78rem;color:var(--muted);margin-top:2px">Security</div>
+        </div>
+      </div>
 
-  <div class="container">
-    <header>
-      <h1>Red Dragon Security</h1>
-      <p class="tagline">Cyber Intelligence • AI Security Testing • OSINT • Wireless & Drone Security</p>
-    </header>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Active Projects</a>
+        <a href="#tools">Tools</a>
+        <a href="#consulting">Consulting</a>
+        <a href="#contact">Contact</a>
+        <a href="https://ukcybersecurity.example/consultants/red-dragon-security" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">UKCybersecurity</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <section class="block">
-        <h2>Operator‑Grade Cyber Intelligence</h2>
-        <p>
-          Red Dragon Security provides high‑signal cyber intelligence and threat analysis for individuals, SMEs, 
-          and organisations operating in exposed or high‑risk environments. We map adversaries, behaviours, 
-          infrastructure, and vulnerabilities with precision.
-        </p>
-      </section>
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <div class="pill">Private Threat Intelligence</div>
+        <h1 id="hero-heading">Red Dragon Security</h1>
+        <p class="lead">Specialist lab and consultancy delivering private threat intelligence, exploit research, tooling, and AI‑driven cyber research. We combine OSINT, OPSEC, and advanced analytics to produce actionable intelligence for selective clients.</p>
 
-      <section class="block">
-        <h2>AI Security Testing</h2>
-        <ul>
-          <li><strong>AI agents:</strong> behavioural drift, unsafe autonomy, prompt‑chain manipulation.</li>
-          <li><strong>AI chatbots:</strong> jailbreak vectors, data‑leak exposure, adversarial prompts.</li>
-          <li><strong>AI workflows:</strong> n8n agents, API chains, automation logic.</li>
-          <li><strong>AI decision systems:</strong> bias exploitation, logic‑chain corruption, unsafe actions.</li>
-        </ul>
-        <p>If an AI system can be misled, manipulated, or weaponised — we find out.</p>
-      </section>
+        <div class="cta-row" style="margin-top:12px">
+          <a class="btn" href="#contact">Request Brief</a>
+          <a class="btn secondary" href="#research">View Research</a>
+        </div>
 
-      <section class="block">
-        <h2>Wireless & Signal Security</h2>
-        <ul>
-          <li><strong>WiFi security:</strong> rogue AP detection, credential harvesting, signal leakage.</li>
-          <li><strong>Bluetooth security:</strong> pairing attacks, device impersonation, proximity exploits.</li>
-          <li><strong>RF analysis:</strong> device fingerprinting, interference mapping, exposure tracking.</li>
-          <li><strong>IoT systems:</strong> insecure protocols, weak encryption, default‑credential exposure.</li>
-        </ul>
-        <p>If it emits a signal, we can test it.</p>
-      </section>
+        <div style="margin-top:18px;color:var(--muted);font-size:0.95rem">
+          <div><strong>Lead</strong> Matthew Beddoes</div>
+          <div class="meta">Intelligence Systems Architect — OSINT, Cyber, AI & Graph Analytics</div>
+        </div>
 
-      <section class="block">
-        <h2>Drone & Autonomous System Security</h2>
-        <ul>
-          <li><strong>Drone control‑link security:</strong> command‑link resilience, telemetry exposure.</li>
-          <li><strong>GPS spoofing resistance:</strong> navigation manipulation, drift‑response testing.</li>
-          <li><strong>FPV system testing:</strong> video‑feed interception, jamming resilience.</li>
-          <li><strong>Autonomous behaviour analysis:</strong> decision‑logic safety, interference response.</li>
-        </ul>
-        <p>Your airborne systems are part of your attack surface — we secure them.</p>
-      </section>
+        <div style="margin-top:14px">
+          <span class="press-badge">Featured on BBC Radio 2, BBC Radio Merseyside, and LBC Radio</span>
+        </div>
+      </div>
 
-      <section class="block">
-        <h2>OSINT & Threat Mapping</h2>
-        <ul>
-          <li>Adversary behaviour analysis</li>
-          <li>Infrastructure fingerprinting</li>
-          <li>Director exposure tracking</li>
-          <li>High‑risk advisory</li>
-          <li>Attack‑surface intelligence</li>
-        </ul>
-        <p>
-          We operate quietly, precisely, and without noise. For commercial audits, visit
-          <a href="https://www.ukcybersecuritytesting.co.uk">UKCyberSecurityTesting.co.uk</a>.
-        </p>
-      </section>
+      <aside class="hero-right">
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-family:var(--mono)">RD</div>
+            <div>
+              <div style="font-weight:800">Red Dragon Security</div>
+              <div style="color:var(--muted);font-size:0.9rem;margin-top:4px">Selective engagements • NDA available</div>
+            </div>
+          </div>
 
-      <section class="block contact">
-        <h2>Contact</h2>
-        <p>Phone: <a href="tel:+447533943388">+44 7533 943388</a></p>
-        <div id="hubspot-form"></div>
-      </section>
-    </main>
+          <div style="margin-top:12px;color:var(--muted);font-size:0.92rem">
+            <div><strong>Focus</strong> Private TI, Exploit Research, Tooling, AI for Cyber</div>
+            <div style="margin-top:8px"><strong>Availability</strong> Selective engagements only</div>
+          </div>
 
-    <footer>
-      <p>© Red Dragon Security</p>
-      <p>
-        <a href="https://www.marchlandlabs.online">Marchland Labs</a> •
-        <a href="https://www.business-analytica.com">Business‑Analytica</a> •
-        <a href="https://www.ukcybersecuritytesting.co.uk">UKCyberSecurityTesting</a>
-      </p>
-    </footer>
-  </div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn" href="#contact">Engage</a>
+            <a class="btn secondary" href="mailto:matthew@business-analytica">Email</a>
+          </div>
+        </div>
+      </aside>
+    </section>
 
-  <!-- HubSpot Form Embed -->
+    <section id="services">
+      <div class="section-title"><h2>Services</h2></div>
+      <div class="grid">
+        <div class="card service">
+          <h3>Private Threat Intelligence</h3>
+          <p><strong>Tailored intelligence</strong> for executive teams and security operations. Dark web monitoring, actor profiling, infrastructure mapping, and bespoke intelligence briefs delivered under NDA.</p>
+        </div>
+
+        <div class="card service">
+          <h3>Exploit Research</h3>
+          <p>Responsible discovery and analysis of vulnerabilities. We provide safe, non‑destructive proof summaries, exploitability assessments, and coordinated disclosure support.</p>
+        </div>
+
+        <div class="card service">
+          <h3>Tool Development</h3>
+          <p>Custom tooling for secure operations, automation, and research workflows. Focus on reproducible, auditable tools with clear OPSEC controls.</p>
+        </div>
+
+        <div class="card service">
+          <h3>AI for Cyber Research</h3>
+          <p>Applying LLMs and graph AI to threat hunting, triage, and enrichment. Pipelines prioritise safety, redaction, and human‑in‑the‑loop review.</p>
+        </div>
+
+        <div class="card service">
+          <h3>OPSEC & OSINT Research</h3>
+          <p>Operational security reviews, adversary emulation planning, and advanced OSINT collection strategies that respect legal and ethical boundaries.</p>
+        </div>
+
+        <div class="card service">
+          <h3>Consultancy</h3>
+          <p>Advisory services for boards, incident response teams, and product security groups. Short engagements, retainers, and long‑term strategic partnerships available.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-title"><h2>Research</h2></div>
+
+      <div class="card" style="margin-bottom:14px">
+        <h3>Active Research Streams</h3>
+        <div style="margin-top:10px;color:var(--muted)">
+          <ul style="margin-left:18px;line-height:1.6">
+            <li><strong>Private TI</strong> — actor profiling, infrastructure mapping, targeted monitoring.</li>
+            <li><strong>Exploit lifecycle</strong> — safe analysis, reproducible writeups, disclosure playbooks.</li>
+            <li><strong>AI for security</strong> — applied research into model‑assisted triage and safe automation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Research Outputs</h3>
+          <p style="color:var(--muted)">Non‑sensitive summaries and safe writeups of research outputs are published here when appropriate. Private reports and detailed technical briefs are available under NDA.</p>
+        </div>
+
+        <div class="card">
+          <h3>Responsible Practices</h3>
+          <p style="color:var(--muted)">All research follows strict legal review, OPSEC controls, and human‑in‑the‑loop validation. We do not publish exploit code or enable unsafe replication.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" style="margin-top:28px">
+      <div class="section-title"><h2>Active Projects</h2></div>
+
+      <div class="card">
+        <p style="color:var(--muted);margin:0 0 12px 0">Current engineering and research efforts. All projects follow strict OPSEC, legal review, and human‑in‑the‑loop controls.</p>
+
+        <div class="projects-grid" style="margin-top:12px">
+          <div class="project">
+            <h4>MFA Proxy Attack Detection</h4>
+            <p>Developing detection techniques and telemetry for proxy‑based MFA bypass attempts, focusing on behavioural signals, session anomalies, and automated alerting for SOCs.</p>
+            <div class="tags"><span class="tag">Telemetry</span><span class="tag">SOC</span><span class="tag">MFA</span></div>
+          </div>
+
+          <div class="project">
+            <h4>Intelligent Blind Fuzzing</h4>
+            <p>Building a fuzzing framework that uses adaptive heuristics and lightweight ML to prioritise inputs, reduce noise, and find edge‑case crashes in large codebases without heavy compute.</p>
+            <div class="tags"><span class="tag">Fuzzing</span><span class="tag">ML</span><span class="tag">Automation</span></div>
+          </div>
+
+          <div class="project">
+            <h4>AI Cognitive Attacks</h4>
+            <p>Research into adversarial and social engineering vectors amplified by generative models, with a focus on detection, mitigation, and policy guidance for defenders.</p>
+            <div class="tags"><span class="tag">Adversarial AI</span><span class="tag">Defence</span><span class="tag">Policy</span></div>
+          </div>
+
+          <div class="project">
+            <h4>Pentesting AI Agents</h4>
+            <p>Evaluating autonomous pentest agents and red‑team bots to understand their capabilities, failure modes, and safe containment strategies for responsible use in engagements.</p>
+            <div class="tags"><span class="tag">Red Team</span><span class="tag">Autonomy</span><span class="tag">Safety</span></div>
+          </div>
+
+          <div class="project">
+            <h4>Darknet Research for Threat Intelligence</h4>
+            <p>Targeted collection and analysis of darknet marketplaces and actor infrastructure to enrich private TI feeds, prioritising legal compliance and non‑intrusive collection methods.</p>
+            <div class="tags"><span class="tag">Darknet</span><span class="tag">TI</span><span class="tag">OSINT</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" style="margin-top:28px">
+      <div class="section-title"><h2>Tools</h2></div>
+
+      <div class="card">
+        <div class="tools-list">
+          <div class="tool-item"><strong>RD Scout</strong> — OSINT collection pipeline (read‑only snapshots, no execution)</div>
+          <div class="tool-item"><strong>RD Triage</strong> — static analysis and LLM summariser for PoC artifacts</div>
+          <div class="tool-item"><strong>RD Graph</strong> — threat graph engine for actor and infrastructure mapping</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="consulting" style="margin-top:28px">
+      <div class="section-title"><h2>Consulting</h2></div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Engagement Models</h3>
+          <p style="color:var(--muted)">Short advisory calls, scoped research engagements, and retained intelligence services. Pricing and NDAs provided after an initial scoping call.</p>
+        </div>
+
+        <div class="card">
+          <h3>How to Engage</h3>
+          <p style="color:var(--muted)">Use the contact form below or email <strong>matthew@business-analytica</strong>. For UKCybersecurity referrals, follow the link in the header to our consultant profile.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" style="margin-top:26px">
+      <div class="section-title"><h2>History</h2></div>
+      <div class="card">
+        <p style="color:var(--muted)">Red Dragon Security is a specialist practice led by Matthew Beddoes. The practice combines OSINT, cyber research, and systems architecture experience to deliver high‑value intelligence and tooling for clients across government, enterprise, and critical infrastructure sectors.</p>
+      </div>
+    </section>
+
+    <section id="press-mentions" style="margin-top:28px">
+      <div class="section-title"><h2>Press & Mentions</h2></div>
+      <div class="card">
+        <p style="color:var(--muted);margin:0">Featured on BBC Radio 2, BBC Radio Merseyside, and LBC Radio as a cyber security consultant.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <div class="section-title"><h2>Contact</h2></div>
+
+      <div class="card" style="max-width:820px;margin:0 auto;padding:18px">
+        <div id="hubspot-form-wrapper"></div>
+
+        <div class="consent" style="margin-top:12px">
+          <input type="checkbox" id="consent-checkbox" />
+          <label for="consent-checkbox">I consent to Red Dragon Security storing my contact details and contacting me about my enquiry. See our <a href="/privacy" style="color:var(--accent)">privacy policy</a>.</label>
+        </div>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:0.92rem">
+          <div class="small"><strong>Email</strong> matthew@business-analytica</div>
+          <div class="small" style="margin-top:6px"><strong>Consultant profile</strong> <a href="https://ukcybersecurity.example/consultants/red-dragon-security" target="_blank" rel="noopener" style="color:var(--accent)">UKCybersecurity</a></div>
+        </div>
+
+        <div id="contact-success" style="display:none;margin-top:12px;color:var(--text)">
+          <h3 style="color:var(--accent);margin-bottom:6px">Thanks — message received</h3>
+          <p style="color:var(--muted)">We will respond within 24 hours. For urgent matters, email matthew@business-analytica.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:var(--max-width);margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="small">&copy; <strong>Red Dragon Security</strong> — All rights reserved</div>
+      <div class="small">Privacy policy • Terms</div>
+    </div>
+  </footer>
+
+  <!-- HubSpot embed (replace YOUR_PORTAL_ID and YOUR_FORM_ID) -->
   <script>
-    (function() {
-      var script = document.createElement("script");
-      script.src = "https://js.hsforms.net/forms/v2.js";
+    (function(){
+      var portalId = "YOUR_PORTAL_ID"; // replace
+      var formId = "YOUR_FORM_ID";     // replace
+
+      var wrapper = document.getElementById("hubspot-form-wrapper");
+
+      if (!portalId || !formId) {
+        // fallback simple form
+        if (wrapper) {
+          wrapper.innerHTML = '<form id="fallback-contact" style="display:flex;flex-direction:column;gap:10px">' +
+            '<input name="name" placeholder="Name" required style="padding:10px;border-radius:8px;border:1px solid var(--border);background:#0b0b0c;color:var(--text)">' +
+            '<input name="email" placeholder="Email" type="email" required style="padding:10px;border-radius:8px;border:1px solid var(--border);background:#0b0b0c;color:var(--text)">' +
+            '<input name="company" placeholder="Company (optional)" style="padding:10px;border-radius:8px;border:1px solid var(--border);background:#0b0b0c;color:var(--text)">' +
+            '<textarea name="message" placeholder="Message" rows="5" required style="padding:10px;border-radius:8px;border:1px solid var(--border);background:#0b0b0c;color:var(--text)"></textarea>' +
+            '<div style="display:flex;gap:10px;align-items:center"><input id="fallback-consent" type="checkbox" required><label for="fallback-consent" style="color:var(--muted)">I consent to storing my details</label></div>' +
+            '<div style="display:flex;gap:8px"><button type="submit" class="btn">Send</button></div></form>';
+
+          var form = wrapper.querySelector('#fallback-contact');
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            document.getElementById('contact-success').style.display = 'block';
+            wrapper.style.display = 'none';
+          });
+        }
+        return;
+      }
+
+      var script = document.createElement('script');
+      script.src = 'https://js.hsforms.net/forms/v2.js';
       script.async = true;
-      script.onload = function() {
+      script.onload = function(){
         if (window.hbspt && window.hbspt.forms) {
           window.hbspt.forms.create({
-            portalId: "YOUR_PORTAL_ID",
-            formId: "YOUR_FORM_ID",
-            target: "#hubspot-form"
+            portalId: portalId,
+            formId: formId,
+            target: '#hubspot-form-wrapper',
+            css: '',
+            onFormReady: function(){
+              try {
+                var consent = document.getElementById('consent-checkbox');
+                var injected = document.querySelector('#hubspot-form-wrapper form.hs-form');
+                if (!injected || !consent) return;
+                injected.addEventListener('submit', function(e){
+                  if (!consent.checked) {
+                    e.preventDefault();
+                    var msg = injected.querySelector('.consent-warning');
+                    if (!msg) {
+                      msg = document.createElement('div');
+                      msg.className = 'consent-warning';
+                      msg.style.color = '#ffb4b4';
+                      msg.style.marginTop = '8px';
+                      msg.textContent = 'Please confirm consent to allow us to contact you.';
+                      injected.appendChild(msg);
+                    }
+                    return false;
+                  }
+                });
+              } catch (err) { console.warn(err) }
+            },
+            onFormSubmitted: function(){
+              var wrapper = document.getElementById('hubspot-form-wrapper');
+              if (wrapper) wrapper.style.display = 'none';
+              var success = document.getElementById('contact-success');
+              if (success) success.style.display = 'block';
+            }
           });
         }
       };
       document.head.appendChild(script);
     })();
   </script>
-
 </body>
 </html>
