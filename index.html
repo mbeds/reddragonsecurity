@@ -200,7 +200,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       background: rgba(255,30,56,0.05);
     }
 
-    .signup-card {
+    /* DIRECT CONTACT CARD */
+    .contact-card {
       background: var(--card-bg);
       padding: 2rem;
       border-radius: 16px;
@@ -209,46 +210,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
-    .signup-card h2 {
+    .contact-card h2 {
       font-size: 1.5rem;
       margin-bottom: 0.4rem;
     }
 
-    .signup-card > p {
+    .contact-card > p {
       font-size: 0.9rem;
       color: var(--text-muted);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .signup-card form {
+    .contact-channels {
       display: grid;
       gap: 0.8rem;
     }
 
-    input, select, textarea {
+    .channel-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       background: #050505;
       border: 1px solid rgba(255,255,255,0.1);
-      padding: 0.75rem 0.9rem;
-      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
       color: var(--text-main);
-      font-size: 0.9rem;
-      font-family: var(--font-main);
-      transition: border-color 0.2s;
+      transition: all 0.2s ease;
     }
 
-    input:focus, select:focus, textarea:focus {
-      outline: none;
+    .channel-item:hover {
       border-color: var(--accent-red);
+      background: rgba(255,30,56,0.05);
+      transform: translateY(-1px);
     }
 
-    textarea {
-      height: 100px;
-      resize: none;
+    .channel-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      font-weight: 600;
     }
 
-    select option {
-      background: #111;
-      color: var(--text-main);
+    .channel-value {
+      font-size: 0.95rem;
+      color: var(--accent-soft);
+      font-weight: 500;
     }
 
     /* GRID SYSTEM */
@@ -413,7 +421,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         font-size: 2rem;
       }
 
-      .signup-card, #contact {
+      .contact-card, #contact {
         padding: 1.25rem;
       }
     }
@@ -429,8 +437,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 
   <script>
-    function scrollToEnquiry() {
-      document.getElementById("assessmentForm").scrollIntoView({ behavior: "smooth" });
+    function scrollToContact() {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
     }
   </script>
 </head>
@@ -470,33 +478,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="hero-actions">
       <a href="#consulting" class="btn-primary">View Services</a>
-      <button class="btn-secondary" onclick="scrollToEnquiry()">Book Consultation</button>
+      <button class="btn-secondary" onclick="scrollToContact()">Direct Contact</button>
     </div>
   </div>
 
-  <div class="signup-card">
-    <h2>Book a Consultation</h2>
-    <p>Submit your details to align with our advisory team for cyber, AI, or OSINT engagements.</p>
+  <div class="contact-card">
+    <h2>Direct Operations</h2>
+    <p>Connect directly with our advisory and technical response team through secure channels.</p>
 
-    <form id="assessmentForm">
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="text" name="company" placeholder="Company" />
-      <input type="tel" name="phone" placeholder="Phone" />
-      <input type="email" name="email" placeholder="Email" required />
-
-      <textarea name="enquiry" placeholder="Describe your consulting requirements or scope" required></textarea>
-
-      <select name="interest">
-        <option value="">Consulting Domain</option>
-        <option>Cyber Security Audit & Strategy</option>
-        <option>AI Security & LLM Risk Assessment</option>
-        <option>OSINT & Digital Footprint Investigation</option>
-        <option>Executive Protection & Advisory</option>
-        <option>General Retainer / Inquiry</option>
-      </select>
-
-      <button class="btn-primary" type="submit" style="width: 100%; border-radius: 8px; margin-top: 0.2rem;">Request Consultation</button>
-    </form>
+    <div class="contact-channels">
+      <a href="mailto:info@red-dragon-security.com" class="channel-item">
+        <span class="channel-label">Email</span>
+        <span class="channel-value">info@red-dragon-security.com</span>
+      </a>
+      <a href="tel:+442079460900" class="channel-item">
+        <span class="channel-label">Phone</span>
+        <span class="channel-value">+44 7986 903415</span>
+      </a>
+      <a href="https://wa.me/442079460900" target="_blank" class="channel-item">
+        <span class="channel-label">WhatsApp</span>
+        <span class="channel-value">Message Secure Desk</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -596,7 +599,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="contact">
   <h2>Contact Operations</h2>
   <p>
-    General Inquiries: <a href="mailto:info@red-dragon-security.com">info@red-dragon-security.com</a>
+    Email: <a href="mailto:info@red-dragon-security.com">info@red-dragon-security.com</a><br>
+    Phone: <a href="tel:+442079460900">+44 7986 903415</a><br>
+    Encrypted Channels: Signal / Telegram / WhatsApp via direct dispatch.
   </p>
 </section>
 
