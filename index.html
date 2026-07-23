@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Red Dragon Security — Cyber Intelligence & OSINT</title>
+  <title>Red Dragon Security — Cyber Intelligence</title>
+
+  <link rel="stylesheet" href="style.css">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -13,27 +15,57 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-
-  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <header>
     <h1>Red Dragon Security</h1>
-    <p>Cyber Intelligence • OSINT • Threat Mapping • Operator‑Grade Analysis</p>
+    <p class="tagline">Cyber Intelligence • OSINT • Threat Mapping</p>
   </header>
 
-  <section>
-    <h2>Threat Intelligence</h2>
-    <p>Structured cyber‑behaviour analysis, ransomware cluster mapping, attack‑surface intelligence.</p>
+  <section class="core">
+    <p>
+      Red Dragon Security provides operator‑grade cyber intelligence, threat mapping, 
+      and OSINT analysis for high‑risk environments. 
+      For commercial audits, visit 
+      <a href="https://www.ukcybersecuritytesting.co.uk">UKCyberSecurityTesting.co.uk</a>.
+    </p>
   </section>
 
-  <section>
-    <h2>Cyber OSINT</h2>
-    <p>Director behaviour mapping, exposure tracking, infrastructure fingerprinting.</p>
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Phone: <a href="tel:+447533943388">+44 7533 943388</a></p>
+
+    <div id="hubspot-form"></div>
   </section>
 
   <footer>
-    <p>© Red Dragon Security — Operated by Matthew Beddoes</p>
+    <p>© Red Dragon Security</p>
+    <p>
+      <a href="https://www.marchlandlabs.online">Marchland Labs</a> • 
+      <a href="https://www.business-analytica.com">Business‑Analytica</a>
+    </p>
   </footer>
+
+  <!-- HubSpot Form Embed -->
+  <script>
+    (function() {
+      var script = document.createElement("script");
+      script.src = "https://js.hsforms.net/forms/v2.js";
+      script.async = true;
+      script.onload = function() {
+        if (window.hbspt && window.hbspt.forms) {
+          window.hbspt.forms.create({
+            portalId: "YOUR_PORTAL_ID",
+            formId: "YOUR_FORM_ID",
+            target: "#hubspot-form"
+          });
+        }
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
+
 </body>
 </html>
