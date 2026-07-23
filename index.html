@@ -11,8 +11,8 @@
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Red Dragon Security — Private Threat Intelligence & Cyber Research</title>
-  <meta name="description" content="Red Dragon Security — private threat intelligence, exploit research, tool development, AI for cyber research, OPSEC & OSINT consultancy." />
+  <title>Red Dragon Security — Cyber Research & Development</title>
+  <meta name="description" content="Specialist cyber research, exploit analysis, AI security, and security consultancy." />
   <meta name="theme-color" content="#0a0a0c" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,11 +41,12 @@
     header {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 40px 0 60px 0;
+      padding: 30px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--border);
+      position: relative;
     }
 
     .brand {
@@ -76,6 +77,7 @@
       letter-spacing: -0.01em;
     }
 
+    /* Navigation & Mobile Toggle */
     nav {
       display: flex;
       gap: 24px;
@@ -93,14 +95,26 @@
       color: var(--text);
     }
 
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
     main {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 60px 0;
+      padding: 40px 0;
     }
 
     .hero {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
 
     .meta-tag {
@@ -123,7 +137,7 @@
     .lead {
       color: var(--muted);
       font-size: 1.1rem;
-      max-width: 44ch;
+      max-width: 48ch;
       margin-bottom: 32px;
     }
 
@@ -131,6 +145,7 @@
       display: flex;
       gap: 16px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -159,34 +174,45 @@
     }
 
     section {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
 
     h2 {
       font-size: 1.25rem;
       font-weight: 600;
       letter-spacing: -0.02em;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       padding-bottom: 12px;
       border-bottom: 1px solid var(--border);
     }
 
-    .stack-list {
+    /* Responsive Grid Layouts */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 6px;
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 8px;
     }
 
-    .stack-item h3 {
+    .card h3 {
       font-size: 1rem;
       font-weight: 600;
-      margin-bottom: 6px;
+      color: var(--text);
     }
 
-    .stack-item p {
+    .card p {
       color: var(--muted);
-      font-size: 0.95rem;
-      max-width: 60ch;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     .press-callout {
@@ -194,9 +220,10 @@
       color: var(--muted);
       padding: 16px 20px;
       background: var(--surface);
+      border: 1px solid var(--border);
       border-left: 2px solid var(--accent);
       border-radius: 0 4px 4px 0;
-      margin-top: 40px;
+      margin-top: 32px;
     }
 
     footer {
@@ -208,6 +235,8 @@
       justify-content: space-between;
       color: var(--muted);
       font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     /* Form Styles */
@@ -247,9 +276,24 @@
     }
     .consent input { margin-top: 3px; accent-color: var(--accent); }
 
+    /* Mobile Responsive Overrides */
     @media(max-width: 768px) {
-      nav { display: none; }
-      header { padding: 30px 0; }
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 16px;
+        z-index: 50;
+      }
+      nav.active { display: flex; }
+      body { padding: 0 16px; }
     }
   </style>
 </head>
@@ -260,76 +304,66 @@
       <div class="logo">RD</div>
       <div class="brand-name">Red Dragon Security</div>
     </a>
-    <nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">Menu</button>
+    <nav id="navMenu">
       <a href="#services">Services</a>
-      <a href="#research">Research</a>
-      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="meta-tag">Private Threat Intelligence</div>
-      <h1>Specialist cyber research and threat intelligence consultancy.</h1>
-      <p class="lead">Delivering private threat intelligence, exploit research, secure tooling, and AI-driven analysis for selective enterprise and institutional clients.</p>
+      <div class="meta-tag">Private CyberAI Research & Exploit & Development</div>
+      <h1>Specialist cyber research, security engineering, and consulting.</h1>
+      <p class="lead">Delivering in-depth vulnerability research, artificial intelligence security studies, and secure software development for organizations seeking advanced digital defense.</p>
       
       <div class="actions">
-        <a class="btn" href="#contact">Request Brief</a>
+        <a class="btn" href="#contact">Get in Touch</a>
         <a class="btn secondary" href="https://ukcybersecurity.example/consultants/red-dragon-security" target="_blank" rel="noopener">UKCybersecurity Profile &rarr;</a>
       </div>
 
       <div class="press-callout">
-        Featured analyst commentary across BBC Radio 2, BBC Radio Merseyside, and LBC Radio.
+        Featured security analyst commentary across BBC Radio 2, BBC Radio Merseyside, and LBC Radio.
       </div>
     </section>
 
     <section id="services">
       <h2>Capabilities</h2>
-      <div class="stack-list">
-        <div class="stack-item">
-          <h3>Private Threat Intelligence</h3>
-          <p>Tailored intelligence briefs, deep actor profiling, and dedicated infrastructure mapping delivered under strict NDA.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Consulting & Risk Advisory</h3>
+          <p>Expert guidance for executive teams and engineering departments to evaluate digital risks, secure core infrastructure, and respond effectively to security incidents.</p>
         </div>
-        <div class="stack-item">
-          <h3>Exploit Research</h3>
-          <p>Responsible vulnerability discovery, rigorous code analysis, and non-destructive impact assessments.</p>
+        <div class="card">
+          <h3>Vulnerability & Exploit Research</h3>
+          <p>Investigating complex software flaws to understand how attackers breach systems, allowing us to help organizations patch vulnerabilities proactively.</p>
         </div>
-        <div class="stack-item">
-          <h3>Tool Development</h3>
-          <p>Custom engineering for secure operations, automated telemetry pipelines, and strict OPSEC review environments.</p>
+        <div class="card">
+          <h3>AI Security & Research</h3>
+          <p>Evaluating how artificial intelligence systems process data, identifying potential security blind spots, and building safety controls for machine learning tools.</p>
         </div>
-        <div class="stack-item">
-          <h3>AI for Cyber Research</h3>
-          <p>Applying structured LLM and graph analytic workflows to threat hunting and log triage with human-in-the-loop controls.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="research">
-      <h2>Active Research & Projects</h2>
-      <div class="stack-list">
-        <div class="stack-item">
-          <h3>MFA Proxy Attack Detection</h3>
-          <p>Telemetry engineering targeting proxy-based authentication bypass mechanics and behavioural anomaly alerts.</p>
-        </div>
-        <div class="stack-item">
-          <h3>Intelligent Fuzzing Heuristics</h3>
-          <p>Lightweight machine learning wrappers designed to optimize test-case prioritization in complex target binaries.</p>
-        </div>
-        <div class="stack-item">
-          <h3>Autonomous Agent Red-Teaming</h3>
-          <p>Evaluating the boundaries, operational constraints, and failure modes of automated pentesting models.</p>
+        <div class="card">
+          <h3>Secure Software Development</h3>
+          <p>Building specialized internal tools and applications from the ground up with a heavy emphasis on data protection, system reliability, and operational security.</p>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <h2>Practice</h2>
-      <div class="stack-list">
-        <div class="stack-item">
-          <h3>Matthew Beddoes</h3>
-          <p>Intelligence Systems Architect specializing in OSINT, advanced systems analysis, and secure infrastructural design. Operating on selective retainers.</p>
+    <section id="projects">
+      <h2>Active Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>MFA Bypass Detection</h3>
+          <p>Engineering specialized monitoring systems to spot sophisticated attacks where hackers attempt to slip past two-factor authentication prompts.</p>
+        </div>
+        <div class="card">
+          <h3>Automated Testing (Fuzzing)</h3>
+          <p>Developing lightweight machine learning algorithms designed to automatically test software inputs, helping uncover hidden bugs and system crashes faster.</p>
+        </div>
+        <div class="card">
+          <h3>AI Agent Security Assessment</h3>
+          <p>Testing the boundaries, operational constraints, and failure points of automated artificial intelligence tools used in technical environments.</p>
         </div>
       </div>
     </section>
@@ -341,11 +375,12 @@
 
         <div class="consent">
           <input type="checkbox" id="consent-checkbox" />
-          <label for="consent-checkbox">I consent to Red Dragon Security storing my information for communication purposes.</label>
+          <label for="consent-checkbox">I consent to storing my information for communication and enquiry purposes.</label>
         </div>
 
-        <div style="margin-top: 20px; font-size: 0.85rem; color: var(--muted);">
-          Direct inquiry: <a href="mailto:matthew@business-analytica" style="color: var(--text); text-decoration: none;">matthew@business-analytica</a>
+        <div style="margin-top: 20px; font-size: 0.85rem; color: var(--muted); display: flex; flex-direction: column; gap: 6px;">
+          <div>Direct Email: <a href="mailto:matthew@ukcybersecuritytesting.co.uk" style="color: var(--text); text-decoration: none;">matthew@ukcybersecuritytesting.co.uk</a></div>
+          <div>Direct Phone: <a href="tel:+447986903415" style="color: var(--text); text-decoration: none;">+44 7986 903415</a></div>
         </div>
 
         <div id="contact-success" style="display: none; margin-top: 16px; font-size: 0.9rem; color: var(--text);">
@@ -357,10 +392,25 @@
 
   <footer>
     <div>&copy; Red Dragon Security</div>
-    <div>All rights reserved.</div>
+    <div>Direct: matthew@ukcybersecuritytesting.co.uk | +44 7986 903415</div>
   </footer>
 
   <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu on link click for mobile
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // HubSpot / Fallback Form Script
     (function(){
       var portalId = "YOUR_PORTAL_ID";
       var formId = "YOUR_FORM_ID";
