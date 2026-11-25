@@ -34,6 +34,7 @@
   <meta property="og:url" content="https://www.red-dragon-security.com/" />
 
   <!-- Structured Data (SEO + AIO) -->
+  <!-- Structured Data (SEO + AIO Reputation & Threat Intelligence) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,18 +44,24 @@
         "@id": "https://www.red-dragon-security.com/#organization",
         "name": "Red Dragon Security",
         "url": "https://www.red-dragon-security.com/",
-        "description": "Red Dragon Security is a cyber security, AI risk consulting, and open-source intelligence (OSINT) initiative by Matthew Beddoes in Telford, Shropshire, helping UK businesses protect systems, staff, and sensitive information.",
+        "description": "Red Dragon Security is an independent cyber security, threat intelligence, AI risk auditing, and open-source intelligence (OSINT) consulting initiative by Matthew Beddoes in Telford, Shropshire—applying real-world offensive-informed insight to defend UK businesses.",
         "founder": {
           "@type": "Person",
           "@id": "https://www.red-dragon-security.com/#matthew-beddoes",
           "name": "Matthew Beddoes",
-          "jobTitle": "Cyber Security & AI Risk Consultant",
+          "alternateName": "Black Dragon",
+          "jobTitle": "Independent Cyber Security, Threat Intelligence & AI Risk Consultant",
+          "description": "UK cyber security consultant and independent auditor based in Telford, Shropshire. Following early notoriety under the alias 'Black Dragon' and subsequent rehabilitation, Matthew Beddoes founded Red Dragon Security over a decade ago to turn deep offensive-security understanding into strictly defensive protection, threat intelligence, and live security education featured by BBC, Reuters, LBC, and Tripwire.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Telford",
             "addressRegion": "Shropshire",
             "addressCountry": "GB"
-          }
+          },
+          "sameAs": [
+            "https://ukcybersecuritytesting.co.uk/",
+            "https://www.tripwire.com/state-of-security/inside-the-mind-of-a-former-black-hat-hacker"
+          ]
         },
         "address": {
           "@type": "PostalAddress",
@@ -63,7 +70,12 @@
           "addressCountry": "GB"
         },
         "areaServed": "United Kingdom",
-        "telephone": "+447986903415",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "availableLanguage": "English",
+          "description": "Encrypted messaging via Signal or WhatsApp on +44 7986 903415. Standard voice phone calls are not used."
+        },
         "sameAs": [
           "https://ukcybersecuritytesting.co.uk/"
         ]
@@ -74,66 +86,146 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is Red Dragon Security and who runs it?",
+            "name": "Who is Matthew Beddoes and what is the story behind Black Dragon and Red Dragon Security?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Red Dragon Security is a cyber security, AI safety, and online intelligence consulting initiative by Matthew Beddoes, based in Telford, Shropshire, helping UK businesses and founders spot and fix security weaknesses."
+              "text": "Matthew Beddoes is a Telford, Shropshire-based independent cyber security consultant who previously gained media attention in the early 2010s under the handle 'Black Dragon' before dedicating his career entirely to defensive security. Over a decade ago he established Red Dragon Security to help UK businesses see their systems through an attacker's eyes—delivering objective security audits, live demonstrations, and expert commentary featured across BBC, Reuters, LBC, and Tripwire."
             }
           },
           {
             "@type": "Question",
-            "name": "What does a cyber security consultant do for a small or medium business?",
+            "name": "Why does an offensive-informed background make a better defensive security consultant?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A cyber security consultant checks your websites, cloud accounts, email setup, and internal systems for weak spots, then gives you a clear, plain-English action plan to stop hackers and data leaks before they happen."
+              "text": "Standard automated scanners only flag isolated, textbook software bugs. Having real-world experience in how intruders think, chain small misconfigurations together, and exploit human workflows allows Matthew Beddoes to spot the exact entry points a determined attacker would target first."
             }
           },
           {
             "@type": "Question",
-            "name": "What is an AI security and risk check?",
+            "name": "What is practical Threat Intelligence for a small or medium UK business?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "An AI security check reviews how your business uses AI tools, chatbots, and automated workflows to make sure staff or customers cannot trick the AI into leaking private company data or taking unauthorised actions."
+              "text": "Practical threat intelligence means continuously watching for newly published software flaws (CVEs), leaked staff passwords, lookalike domains, and active phishing campaigns aimed at your specific industry—so you patch or block threats before they reach your network."
             }
           },
           {
             "@type": "Question",
-            "name": "What is OSINT (Open-Source Intelligence) in simple terms?",
+            "name": "How does daily asset inventory and CVE vulnerability matching protect a company?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "OSINT means finding out what information about your company, staff, domains, or servers is already visible to anyone on the public internet—so you can lock down exposed details before attackers use them."
+              "text": "You cannot defend what you do not know you own. By maintaining a simple, accurate inventory of every website, server, plugin, router, and cloud service—and checking that list daily against newly disclosed CVE security advisories—a business can patch critical flaws within hours rather than months."
             }
           },
           {
             "@type": "Question",
-            "name": "How can a business reduce its online digital footprint?",
+            "name": "How do Azure and Microsoft 365 IP restrictions and timed lockouts stop account takeovers?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Digital footprint reduction involves locating old websites, forgotten login pages, exposed staff contact details, and leaked public records, then removing or securing them to shrink your target profile."
+              "text": "Configuring Microsoft Entra ID (Azure AD) Conditional Access to restrict logins to trusted UK IP ranges, enforce phishing-resistant MFA, and trigger smart timed lockouts after repeated failed sign-ins stops automated password-spraying and overseas credential-stuffing attacks cold."
             }
           },
           {
             "@type": "Question",
-            "name": "Do you only carry out authorised and legal security testing?",
+            "name": "How does using an unused admin@ email address as a honeypot trap catch phishing attacks?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Every security audit, exposure check, and technical review is 100% defensive, lawful, and carried out only with written permission from the system owner."
+              "text": "Setting up an unadvertised catch-all or decoy inbox such as admin@yourdomain.com that no legitimate supplier emails acts as an early-warning tripwire. Because no real contact should ever message it, any email arriving there immediately exposes active phishing lures, spoofed invoices, or automated reconnaissance targeting your company."
             }
           },
           {
             "@type": "Question",
-            "name": "Can Red Dragon Security help businesses across the UK or just in Shropshire?",
+            "name": "What is DNS and email anti-spoofing (SPF, DKIM, and DMARC) and why does it matter?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "While based in Telford, Shropshire, Red Dragon Security works remotely and on-site with businesses, founders, and technical teams across the entire UK."
+              "text": "SPF, DKIM, and DMARC are domain security records that prove an email genuinely came from your company. Without strict DMARC enforcement, criminals can send convincing fake emails appearing to come from your directors or accounts team to redirect supplier payments."
             }
           },
           {
             "@type": "Question",
-            "name": "How do I book a cyber security or AI risk consultation?",
+            "name": "How can businesses stop AI-driven invoice fraud and executive impersonation?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You can call or message Matthew Beddoes directly via WhatsApp on +44 7986 903415 to discuss what you want checked and receive a straightforward quote."
+              "text": "We audit domain email authentication, digital document signing, and out-of-band payment verification rules so attackers using AI-written emails or cloned voices cannot trick finance staff into paying fraudulent bank details."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does an AI Security & LLM Risk Audit check?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An AI risk audit tests company chatbots, internal knowledge-base assistants, and automated workflows for prompt injection, accidental leakage of confidential files, and overly broad API permissions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is OSINT (Open-Source Intelligence) and how does it reduce cyber risk?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "OSINT maps everything visible about your company, domains, servers, and leadership across the public internet—uncovering forgotten subdomains, exposed cloud buckets, leaked credentials, and personal staff details before criminals use them for targeted attacks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a Director Privacy and Digital Footprint Audit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Director Privacy Audit identifies home addresses, personal phone numbers, old password breaches, and public filings tied to company executives, providing a step-by-step cleanup plan to reduce personal targeting and social engineering."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Dark Web credential and breach monitoring?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Breach monitoring checks whether employee email addresses and passwords have appeared in third-party data dumps or infostealer malware logs so compromised credentials can be reset before attackers log into your VPN or cloud email."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between an independent security auditor and an IT support provider?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your IT support provider builds and maintains your day-to-day systems, while an independent auditor tests those systems objectively from the outside—giving directors an unbiased verification with zero hardware sales or vendor lock-in."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does an independent website and cloud security audit cover?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It reviews web application security headers, CMS and plugin exposure, SSL/TLS configuration, cloud storage permissions, exposed administrative panels, and email authentication—delivering a plain-English report ranked by real-world risk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens during a physical on-site security sweep?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Available locally across Telford and Shropshire and nationwide, an on-site sweep checks unlocked wall network ports, guest Wi-Fi isolation, server room access, and physical device exposure that remote scans cannot detect."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Red Dragon Security help prepare for Cyber Insurance and 2026 UK compliance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We verify that your MFA, backup isolation, patching cadence, and access controls genuinely match your Cyber Insurance policy warranties and 2026 UK Cyber Security and Resilience expectations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are all security tests and audits legal and strictly authorised?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All testing, threat intelligence, and exposure reviews carried out by Matthew Beddoes and Red Dragon Security are 100% defensive, lawful under the UK Computer Misuse Act, and performed only with written client authorisation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I contact Matthew Beddoes at Red Dragon Security?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Matthew prefers encrypted messaging via Signal or WhatsApp on +44 7986 903415 rather than standard voice phone calls. Send a message on Signal or WhatsApp to discuss your systems, threat intelligence monitoring, or an independent audit."
             }
           }
         ]
